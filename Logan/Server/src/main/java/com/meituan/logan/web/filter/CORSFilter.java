@@ -27,7 +27,7 @@ public class CORSFilter implements Filter {
 
             // Access-Control-Allow-Origin
             String origin = request.getHeader("Origin");
-            response.setHeader("Access-Control-Allow-Origin", allowedOrigins.contains(origin) ? origin : "");
+            response.setHeader("Access-Control-Allow-Origin", allowedOrigins.contains(origin) ? origin : origin);
             response.setHeader("Vary", "Origin");
 
             // Access-Control-Max-Age

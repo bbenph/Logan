@@ -33,7 +33,8 @@
 
     <select id="query" parameterType="map" resultMap="resultMap">
         SELECT * FROM web_task
-        WHERE  add_time between #{beginTime} and #{endTime} and device_id=#{deviceId}
+        WHERE  add_time between #{beginTime} and #{endTime} and device_id like concat(#{deviceId},'%')
+        ORDER BY id desc
     </select>
 
     <delete id="deleteByAddTime" parameterType="map">

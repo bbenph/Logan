@@ -80,8 +80,8 @@ public class WebLogController {
             return LoganResponse.badParam("invalid param");
         }
         List<WebLogTaskDTO> list = webTaskService.search(beginTime, endTime, deviceId);
-        List<WebLogTaskDTO> result = reduce(groupByLogDate(list));
-        return LoganResponse.success(result);
+        // List<WebLogTaskDTO> result = reduce(groupByLogDate(list));
+        return LoganResponse.success(list);
     }
 
     /**

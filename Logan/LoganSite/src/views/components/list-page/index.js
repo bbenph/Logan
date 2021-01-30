@@ -114,7 +114,7 @@ class ListPage extends Component {
     if (type === "native") {
       return <Button onClick={this.toDetail(record.taskId)}>日志详情</Button>;
     } else {
-      return <Button onClick={this.toDetail(record.tasks)}>日志详情</Button>;
+      return <Button onClick={this.toDetail(record.tasks || record.taskId)}>日志详情</Button>;
     }
   };
 
